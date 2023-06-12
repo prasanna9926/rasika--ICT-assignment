@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Portfolio Website</title>
+    <title>Js, toggle HTML element visibility</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    
+    <!----hero Section start---->
+
+    <div class="hero">
+        <nav>
+            <h2 class="logo">RP <span>WEBS</span></h2>
+            <section id="Home">
+                <!-- Content of the home section -->
+              </section>
+              
+              <section id="About Us">
+                <!-- Content of the about section -->
+              </section>
+              
+              <section id="Services">
+                <!-- Content of the services section -->
+              </section>
+              
+              <section id="Skills">
+                <!-- Content of the services section -->
+              </section>
+
+              <section id="contact Us">
+                <!-- Content of the contact section -->
+              </section>
+              
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+              <script>
+                const navLinks = document.querySelectorAll('a[href^="#"]');
+              
+                navLinks.forEach((link) => {
+                  link.addEventListener('click', (event) => {
+                    event.preventDefault();
+              
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+              
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                  });
+                });
+              </script>
+              
+               <a href ="#" class="btn">Subscribe</a>
+        </nav>
+           <div class="content">
+            <h4>Hello, My Name is</h4>
+            <h1>Rasika <span>Prasanna</span></h1>
+            <h3>I'am a Web Developer.</h3>
+            <input type="button" value="toggle" onclick="toggleP()"
+            <p id="info">I am a Web Developer.Content Creater.
+                         Grafic Designer.I have a 3 year experiance as a web developer,and I have a Master degree for the softwear engineering and the Web Development.
+            </p>
+        
+            <script>
+                function toggleP(){
+                    let p=document.getElementById("info");
+                    if(p.style.display ==="none"){
+                        p.style.display ="block";
+                     }else{
+                        p.style.display="none";
+                     }
+                }
+            </script>
+
+            <div class="newslatter">
+                <form>
+                    <input type="email"name="email"id="mail"placeholder="Enter your Email" >
+                    <input type="submit"name="submit"value="lets strat ">
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!----About Section Start---->
+    <section class="about">
+        <div class="main">
+            <img src="img/WhatsApp Image 2022-02-04 at 12.31.21 (2).jpeg">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <h5>Developer <span>& Designer</span></h5>
+                <p>
+                    Welcome to my online portfolio! I'm Rasika Prasanna, a dedicated web developer who places a high priority on producing enjoyable and useful online experiences. I'm excited to interact with people and companies looking for skilled online solutions through this platform, display my wide range of projects, and demonstrate my proficiency in web development.
+
+                    I specialize in creating unique websites with a thorough awareness of the ever changing digital world that not only grab users' attention but also provide flawless user experiences. I'm devoted to building websites that are in line with your specific objectives and target audience, from aesthetically gorgeous designs to powerful backend programming.
+
+                </p>
+                  
+                <button type="button">Let's Talk</button>
+            </div>
+        </div>
+    </section>
+
+      <!-----service section start----------->
+     <div class="service">
+          <div class="title">
+              <h2>Our Services</h2>
+          </div>
+          <div class="box">
+              <div class="card">
+                  <h5>Website Development</h5>
+                  <div class="pra">
+                     <p>We offer comprehensive website development services tailored to client specifications, covering everything from layout and design to front-end and back-end development, including CMS integration</p>
+                     <p style="text-align: center;">
+                        <a class="button" href="#">Read More</a>
+                     </p>
+                  </div>
+              </div>
+
+              <div class="card">
+                <h5>Web Application Development</h5>
+                <div class="pra">
+                   <p>We can build web-based applications that perform specific functions or provide interactive experiences. </p>
+                   <p style="text-align: center;">
+                      <a class="button" href="#">Read More</a>
+                   </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h5>E-commerce Development</h5>
+                <div class="pra">
+                   <p> We specialize in building online stores and e-commerce platforms with secure payment gateways, shopping cart functionality, and user-friendly interfaces for seamless online transactions</p>
+                   <p style="text-align: center;">
+                      <a class="button" href="#">Read More</a>
+                   </p>
+                  
+                </div>
+            </div>
+      </div>
+  </div>
+  <div class="slider-container">
+    <div class="slider">
+       <img src="c:\Users\HP\Desktop\Web Development\img\custom gallery image four.png" alt="Image 1">
+       <img src="c:\Users\HP\Desktop\Web Development\img\2.jpg" alt="Image 2">
+       <img src="c:\Users\HP\Desktop\Web Development\img\Kimpton_1-min.png" alt="Image 3">
+       <img src="c:\Users\HP\Desktop\Web Development\img\hilltown-hotel-website-template.jpg" alt="Image 4">
+    </div>
+  </div>
+  <script>
+    const slider = document.querySelector('.slider');
+    let slideIndex = 0;
+    const slides = slider.querySelectorAll('img');
+
+    function showSlide(index) {
+        if (index < 0) {
+            slideIndex = slides.length - 1;
+        } else if (index >= slides.length) {
+            slideIndex = 0;
+        }
+
+        slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    setInterval(() => {
+        slideIndex++;
+        showSlide(slideIndex);
+    }, 2000);
+ </script>
+
+  <!------Contact Me------>
+  <div class="contact-me">
+     <p>Let Me Get You A Beautiful Website</p>
+     <a class="button-two" href="#">Hire Me</a>
+  </div>
+
+  <!------footer start--------->
+  <footer>
+     <p>Rasika Prasanna</p>
+     <p>For more Details please click on the link below to subscribe to my chanel:</p>
+     <div class="social">
+         <a href="#"><i class="bi bi-facebook"></i></a>
+         <a href="#"><i class="bi bi-whatsapp"></i></a>
+         <a href="#"><i class="bi bi-youtube"></i></a>
+     </div>
+     <p class="end">CopyRight By Rasika Prasanna</p>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
